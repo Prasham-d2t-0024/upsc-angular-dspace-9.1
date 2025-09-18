@@ -1,7 +1,7 @@
 {
   "bootstrap_colors": {
-    "primary": "#004960", 
-    "secondary": "#00958f",
+    "primary": "#154979", 
+    "secondary": "#154979",
     "success": "#92c642",
     "info": "#8e1838",
     "warning": "#ec9433",
@@ -27,10 +27,10 @@
     "item_page_analytics": "air"
   },
   "map_theme":{
-    "global_map_theme": ["#9bd4e5", "#71a8b9", "#3e7b8e", "#004960"]
+    "global_map_theme": ["#7da8cf", "#5986b0", "#3c6d9b", "#154979"]
   },
   "feature_config":{
-    "allowCommenting":false,
-    "allowRating": false
+    "allowCommenting":true,
+    "allowRating": true
   }
 }

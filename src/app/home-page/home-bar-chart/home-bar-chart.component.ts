@@ -37,7 +37,7 @@ export class HomeBarChartComponent {
   @Input() barChartOptions: string;
 
   colorScheme = {
-    domain: ['#004960', '#00958f']
+    domain: ['#154979', '#3c6d9b']
   };
   schemeType: string = 'ordinal';
   themeColors:any = {};
@@ -50,9 +50,9 @@ export class HomeBarChartComponent {
     
   }
   ngOnInit(): void {
-    this.colorScheme = {
-      domain: [ this.chartService.primaryColor, this.chartService.secondaryColor ]
-    }    
+    // this.colorScheme = {
+    //   domain: [ this.chartService.primaryColor, this.chartService.secondaryColor ]
+    // }    
   }
 
   loadData() {

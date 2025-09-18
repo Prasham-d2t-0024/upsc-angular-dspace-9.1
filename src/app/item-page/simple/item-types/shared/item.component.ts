@@ -146,7 +146,7 @@ export class ItemComponent implements OnInit {
   // categoryColorMap = new Map<any, any>();
   // customLegendItems: any[] = [];
   colorScheme = {
-    domain: ['#004960', '#00958f']
+    domain: ['#154979', '#3c6d9b']
   };
   allowCommenting:boolean;
   allowRating:boolean;
@@ -170,9 +170,9 @@ export class ItemComponent implements OnInit {
     this.geospatialItemPageFieldsEnabled = environment.geospatialMapViewer.enableItemPageFields;
     this.sortConfigComment = new SortOptions('dc.title', SortDirection.ASC);
     this.sortConfig = new SortOptions('dc.date.accessioned', SortDirection.DESC);
-    this.colorScheme = {
-      domain: [this.chartService.primaryColor, this.chartService.secondaryColor]
-    };
+    // this.colorScheme = {
+    //   domain: [this.chartService.primaryColor, this.chartService.secondaryColor]
+    // };
     this.featureConfigService.load();
     this.allowCommenting = this.featureConfigService.allowCommenting;
     this.allowRating = this.featureConfigService.allowRating;
@@ -557,9 +557,9 @@ export class ItemComponent implements OnInit {
   }
 
   assignColorsAndLoadData() {
-    this.colorScheme = {
-      domain: [ this.chartService.primaryColor, this.chartService.secondaryColor ]
-    }
+    // this.colorScheme = {
+    //   domain: [ this.chartService.primaryColor, this.chartService.secondaryColor ]
+    // }
     
     // this.mapThemeShades = this.chartService.generateShades().reverse();
     setTimeout(() => {

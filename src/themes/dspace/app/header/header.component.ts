@@ -39,9 +39,11 @@ import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-n
 })
 export class HeaderComponent extends BaseComponent implements OnInit {
   public isNavBarCollapsed$: Observable<boolean>;
-
   ngOnInit() {
     super.ngOnInit();
     this.isNavBarCollapsed$ = this.menuService.isMenuCollapsed(this.menuID);
+    let headerLogo = document.getElementById("header-logo") as HTMLElement;
+    headerLogo.style.height =  this.logoDimension?.height;
+    headerLogo.style.width =  this.logoDimension?.width;
   }
 }

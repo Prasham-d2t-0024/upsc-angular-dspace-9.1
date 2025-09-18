@@ -77,7 +77,7 @@ export class HomeTrendingItemComponent {
     domain: ['#004960']
   };
   colorScheme1 = {
-    domain: ['#00958f']
+    domain: ['#3c6d9b']
   };
   viewMode = ViewMode.ListElement;
   cardData: any = [];
@@ -107,9 +107,9 @@ export class HomeTrendingItemComponent {
     this.colorScheme = {
       domain: [this.chartService.primaryColor]
     };
-    this.colorScheme1 = {
-      domain: [this.chartService.secondaryColor]
-    };
+    // this.colorScheme1 = {
+    //   domain: [this.chartService.secondaryColor]
+    // };
     this.loadData();
     this.isAdmin$ = this.authorizationService.isAuthorized(FeatureID.AdministratorOf);
   }

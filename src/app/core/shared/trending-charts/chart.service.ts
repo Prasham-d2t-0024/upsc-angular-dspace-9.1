@@ -396,7 +396,7 @@ generateChartThemeColorRange(): string[] {
   const colors: string[] = [];
   let count = 10; // Number of colors to generate(we show top 10 searches/items in what's trending so making it static 10)
   const primHSL = this.hexToHSL(this.primaryColor);
-  const secHSL = this.hexToHSL(this.secondaryColor);
+  const secHSL = this.hexToHSL("#7da8cf");
 
   for (let i = 0; i < count; i++) {
     let ratio = i / (count - 1);

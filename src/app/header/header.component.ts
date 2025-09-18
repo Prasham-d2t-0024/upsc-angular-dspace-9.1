@@ -52,6 +52,7 @@ export class HeaderComponent implements OnInit {
   public logoPath: string;
   menuID = MenuID.PUBLIC;
   maxMobileWidth = WidthCategory.SM;
+  logoDimension:any = {width:'120px', height:'75px'}
 
   constructor(
     protected menuService: MenuService,
@@ -65,6 +66,8 @@ export class HeaderComponent implements OnInit {
     this.isMobile$ = this.windowService.isUpTo(this.maxMobileWidth);
     this.isXsOrSm$ = this.windowService.isXsOrSm();
     this.logoPath = this.imageConfig.logo;
+    this.logoDimension.height = this.imageConfig?.imageSizes?.logo?.height;
+    this.logoDimension.width = this.imageConfig?.imageSizes?.logo?.width;
   }
 
   public toggleNavbar(): void {

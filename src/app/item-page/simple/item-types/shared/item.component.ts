@@ -299,9 +299,9 @@ export class ItemComponent implements OnInit {
           this.bookmarkitem = rd.payload;
           this.cdRef.detectChanges();
           if (this.bookmarkitem.status === 'active') {
-            this.notificationsService.success('Bookmark this item  successfully!');
+            this.notificationsService.success('Bookmark added successfully!');
           } else {
-            this.notificationsService.success('UnBookmark this item  successfully!');
+            this.notificationsService.success('Bookmark removed successfully!');
           }
 
         } else {

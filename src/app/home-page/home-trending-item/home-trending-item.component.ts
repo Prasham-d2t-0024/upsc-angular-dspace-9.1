@@ -120,7 +120,7 @@ export class HomeTrendingItemComponent {
       ? `/getTopViewItemCount?dateType=${this.i}&top=10&collectionorcommunityid=${this.collectionorCommunityId}&type=${this.type}`
       : `/getTopViewItemCount?dateType=${this.i}&top=10`;
 
-    this.itemdataservice.searchBy(apiEndPoint).subscribe((data) => {
+    this.itemdataservice.searchBy(apiEndPoint,{},false,false,followLink('thumbnail')).subscribe((data) => {
       this.isLoading = false;
       if (data && data?.payload?.page) {
         this.cardData = data.payload.page;

@@ -22,7 +22,7 @@
             @let originals = (originals$ | async)?.payload;
             <div style="height: 78vh;">
               @for (file of originals?.page; track file; let i = $index) {
-              <div class="">
+              <span>
                 <div class="col-12 d-flex" style="justify-content: space-between;">
                   <a style="cursor: pointer;" (click)="showpdf(file)" target="_blank">
                     <span class="slash text-black">{{ i + 1 }}. {{ dsoNameService.getName(file) }}</span>
@@ -31,7 +31,7 @@
                     <i class="fa fa-download text-primary" aria-hidden="true"></i>
                   </a>
                 </div>
-              </div>
+              </span>
               }
             </div>
             }

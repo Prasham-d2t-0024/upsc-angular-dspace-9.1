@@ -17,6 +17,7 @@ import { hasValue } from 'src/app/shared/empty.util';
 import { ListableObjectComponentLoaderComponent } from 'src/app/shared/object-collection/shared/listable-object/listable-object-component-loader.component';
 import { PaginationComponentOptions } from 'src/app/shared/pagination/pagination-component-options.model';
 import { PaginationComponent } from 'src/app/shared/pagination/pagination.component';
+import { followLink } from 'src/app/shared/utils/follow-link-config.model';
 
 @Component({
   selector: 'ds-bookmark',
@@ -77,7 +78,7 @@ export class BookmarkComponent implements OnInit {
             {
               currentPage: currentPagination.currentPage,
               elementsPerPage: currentPagination.pageSize
-            }, false, false);
+            }, false, false, followLink('thumbnail'));
         }),
         getAllSucceededRemoteData(),
       ).subscribe((results: RemoteData<PaginatedList<Item>>) => {

@@ -1,8 +1,8 @@
 @if(itemTab) {
 <div class="col-12" style="max-height: 77vh;overflow-y: auto;overflow-x: auto;">
     @if(itemTab.firstMetadataValue('dc.title')) {
-    <div class="row mb-2 p-0 item-list-abstract">
-        <span class="text-secondary h6">{{'untypeitem.metadata.maintitle' | translate}} : </span>
+    <div class="mb-2 p-0 item-list-abstract">
+        <span class="text-secondary h6">{{'untypeitem.metadata.maintitle' | translate}}: </span>
         @for(title of itemTab.allMetadataValues('dc.title'); track title; let last = $last) {
         <span class="col-lg-12 slash text-black">{{ title }}</span>
         @if(!last) { <span> | </span> }
@@ -12,7 +12,7 @@
 
     @if(itemTab.firstMetadataValue('dc.contributor.author')) {
     <div class="col-lg-12 mb-2 p-0">
-        <span class="text-secondary h6">{{'untypeitem.metadata.authors' | translate}} : </span>
+        <span class="text-secondary h6">{{'untypeitem.metadata.authors' | translate}}: </span>
         @for(author of itemTab.allMetadataValues('dc.contributor.author'); track author; let last = $last) {
         <a [routerLink]="['/search']" [queryParams]="{'f.author':author+',equals'}">{{author}}</a>
         @if(!last) { <span> | </span> }
@@ -33,7 +33,7 @@
     <!-- Corporate Author -->
     @if (itemTab.firstMetadataValue('dc.contributor.corpauthor')) {
     <div class="col-lg-12 mb-3 p-0">
-        <span class="text-secondary h6">{{'untypeitem.metadata.corporateauthor' | translate}} : </span>
+        <span class="text-secondary h6">{{'untypeitem.metadata.corporateauthor' | translate}}: </span>
         @for (author of itemTab.allMetadataValues('dc.contributor.corpauthor'); track author; let last = $last) {
         <span class="text-black">{{ author }}</span>
         @if (!last) { <span> | </span> }

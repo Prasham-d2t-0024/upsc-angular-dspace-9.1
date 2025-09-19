@@ -3395,7 +3395,7 @@
 
   "login.form.forgot-password": "Have you forgotten your password?",
 
-  "login.form.header": "Please log in to DSpace",
+  "login.form.header": "Please log in to Knowledge Hub",
 
   "login.form.new-user": "New user? Click here to register.",
 
@@ -7281,7 +7281,7 @@
   "home.label.hoverinstructioncommunity": "Hover on slices below for Community details and click it for getting more insights.",
   "home.label.trendingcollection": "Trending Collections",
   "home.label.trendingclick instruction": "Hover on bars below for Community details and click it for getting more insights.",
-  "home.page.tab.browsedit": "Browse repository",
+  "home.page.tab.browsedit": "Browse Repository",
   "community.trending.items": "Trending Items",
   "community.trending.metrics": "Trending Metrics",
   "home.label.commentcount": "Comment Count",
@@ -7423,4 +7423,6 @@
   "mydspace.bookmarks.your_bookmark": "Your Bookmarks",
   "mydspace.tabs.submissions": "Submissions",
   "mydspace.comments.no_comments": "No Comments available for approval, which marked as abuse.",
+
+  "untypeitem.metadata.maintitle": "Title"
 }

@@ -8,10 +8,10 @@
             <span>{{'home.browse.repository' | translate}}</span>
           </a>
           <ng-template ngbNavContent>
-            <div class="container-fluid m-0 tabViewContents subCommunityPage">
+            <div class="container-fluid m-0 p-0 tabViewContents subCommunityPage">
               <ng-container *ngIf="(parent$ | async) as parent">
                 <ng-container *ngIf="parent?.payload as parentContext">
-                  <section class="row border-bottom mb-4">
+                  <section class="row border-bottom mb-4 pt-2">
                     <div class="col-12 col-sm-3">
                       <ds-comcol-page-logo *ngIf="logoRD$" [logo]="(logoRD$ | async)?.payload"
                         [alternateText]="'Community Logo'">

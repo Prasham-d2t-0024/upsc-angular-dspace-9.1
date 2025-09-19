@@ -13,34 +13,38 @@
               <div @fadeInOut>
                 @if (collectionRD?.payload; as collection) {
                 <div>
-                  <section class="row border-bottom mb-4 pt-2">
-                    <div class="col-12 col-sm-3">
-                      <!-- Collection logo -->
-                       @if (logoRD$) {
-                      <ds-comcol-page-logo [logo]="(logoRD$ | async)?.payload"
-                        [alternateText]="'collection.logo' | translate">
-                      </ds-comcol-page-logo>
-                      } @else {
-                      <ds-comcol-page-logo [alternateText]="'collection.logo' | translate">
-                      </ds-comcol-page-logo>
-                      }
+                  <section class="d-flex justify-content-between  border-bottom mb-4 pt-2">
+                    <div class="d-flex gapx-3">
+                      <div class="d-inline-flex">
+                        <!-- Collection logo -->
+                         @if (logoRD$) {
+                        <ds-comcol-page-logo [logo]="(logoRD$ | async)?.payload"
+                          [alternateText]="'collection.logo' | translate">
+                        </ds-comcol-page-logo>
+                        } @else {
+                        <ds-comcol-page-logo [alternateText]="'collection.logo' | translate">
+                        </ds-comcol-page-logo>
+                        }
+                      </div>
+                      <div class="d-inline-flex ps-md-0">
+                        <header class="comcol-header mr-auto">
+                          <!-- Collection name -->
+                          <ds-comcol-page-header [name]="dsoNameService.getName(collection)">
+                          </ds-comcol-page-header>
+                           <!-- Handle -->
+                          <ds-comcol-page-handle [content]="collection.handle" [title]="'collection.page.handle'">
+                          </ds-comcol-page-handle>
+                          <!-- Introductory text -->
+                          <ds-comcol-page-content [content]="collection.introductoryText" [hasInnerHtml]="true">
+                          </ds-comcol-page-content>
+                          <!-- News -->
+                          <ds-comcol-page-content [content]="collection.sidebarText" [hasInnerHtml]="true"
+                            [title]="'collection.page.news'">
+                          </ds-comcol-page-content>
+                        </header>
+                      </div>
                     </div>
-                    <div class="col-12 d-flex col-sm-9 ps-md-0">
-                      <header class="comcol-header mr-auto">
-                        <!-- Collection name -->
-                        <ds-comcol-page-header [name]="dsoNameService.getName(collection)">
-                        </ds-comcol-page-header>
-                         <!-- Handle -->
-                        <ds-comcol-page-handle [content]="collection.handle" [title]="'collection.page.handle'">
-                        </ds-comcol-page-handle>
-                        <!-- Introductory text -->
-                        <ds-comcol-page-content [content]="collection.introductoryText" [hasInnerHtml]="true">
-                        </ds-comcol-page-content>
-                        <!-- News -->
-                        <ds-comcol-page-content [content]="collection.sidebarText" [hasInnerHtml]="true"
-                          [title]="'collection.page.news'">
-                        </ds-comcol-page-content>
-                      </header>
+                    <div class="float-end">
                       <ds-dso-edit-menu></ds-dso-edit-menu>
                     </div>
                   </section>
